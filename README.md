@@ -1,19 +1,47 @@
+<div align="center">
+
 # MVR: Multi-view Video Reward Shaping for Reinforcement Learning
 
-Official implementation of **MVR**, accepted at **ICLR 2026**.
+## 🎉 Accepted at ICLR 2026 🎉
 
-- Project page: `https://mvr-rl.github.io/`
-- Paper (PDF): `https://mvr-rl.github.io/assets/MVR_ICLR2026.pdf`
-- OpenReview: `https://openreview.net/forum?id=7lw6s9ELfr`
+**Official JAX implementation of MVR**
 
-MVR learns state relevance from multi-view videos and turns it into reward shaping that helps early exploration while fading as the policy improves. This repository contains the JAX training pipeline, VLM-based reward shaping components, and scripts for MetaWorld and HumanoidBench experiments.
+**Lirui Luo · Guoxi Zhang · Hongming Xu · Yaodong Yang · Cong Fang · Qing Li**
+
+[![Accepted at ICLR 2026](https://img.shields.io/badge/ICLR-2026%20Accepted-ff4d4f?style=for-the-badge)](https://openreview.net/forum?id=7lw6s9ELfr)
+[![Project Page](https://img.shields.io/badge/Project-Page-2ea44f?style=for-the-badge)](https://mvr-rl.github.io/)
+[![Paper PDF](https://img.shields.io/badge/Paper-PDF-b31b1b?style=for-the-badge)](https://mvr-rl.github.io/assets/MVR_ICLR2026.pdf)
+[![OpenReview](https://img.shields.io/badge/OpenReview-ICLR%202026-8c1b13?style=for-the-badge)](https://openreview.net/forum?id=7lw6s9ELfr)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+</div>
+
+<p align="center">
+  <img src="assets/teaser.png" alt="MVR teaser figure" width="88%" />
+</p>
+
+> **TL;DR** MVR is centered on **state-dependent reward shaping**: it learns state relevance from multi-view videos with a frozen vision-language model, then uses that relevance to provide dense guidance early in training while automatically fading as the target behavior emerges.
+
+## Overview
+
+The main idea of MVR is a **state-dependent reward shaping formulation** that integrates task rewards with VLM-based visual guidance without persistently distorting the task objective. Multi-view videos and learned state relevance are the key ingredients that make this shaping signal reliable for dynamic behaviors, robust to occlusion, and naturally self-decaying as performance improves. This repository contains the training code used to learn MVR on **HumanoidBench** and **MetaWorld** with **ViCLIP** and **TQC in JAX**.
+
+## Quick Start
+
+```bash
+uv venv --python 3.11
+source .venv/bin/activate
+uv sync --frozen --no-install-project
+python download_viclip.py
+bash scripts/mvr/run_mvr-metaworld.sh
+```
 
 ## Highlights
 
-- Vision-language reward shaping with ViCLIP
-- TQC-based reinforcement learning in JAX
-- Multi-view video sampling and reward relabeling
-- MetaWorld and HumanoidBench experiment scripts
+- **State-dependent reward shaping** that combines task rewards with learned visual guidance
+- Automatic decay of the shaping term as the policy approaches the target behavior
+- Multi-view video relevance learning with ViCLIP to handle dynamic motions and occlusion
+- TQC-based reinforcement learning in JAX with experiment scripts for MetaWorld and HumanoidBench
 
 ## Installation
 
