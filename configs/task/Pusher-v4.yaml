@@ -1,0 +1,3 @@
+name: Pusher-v4
+info_keys_to_print: ["reward_dist", "reward_control"]
+target_prompts: ["a robot gripper moving a cylinder to the red goal"]

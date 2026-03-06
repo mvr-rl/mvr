@@ -1,0 +1,4 @@
+name: push-back-v3-goal-observable
+info_keys_to_print: ["success", "near_object", "grasp_success", "grasp_reward", "in_place_reward","obj_to_target", "unscaled_reward"]
+target_prompts: ["a robot gripper pushing the wooden block backward"]
+target_prompts_components: ["a robot gripper approaching a wooden block from the front", "a robot gripper making contact with the block", "a robot gripper pushing the block backward", "a robot gripper moving the block along a straight path", "a robot gripper placing the block at the designated backward target"]

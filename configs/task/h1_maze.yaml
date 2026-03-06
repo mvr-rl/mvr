@@ -1,0 +1,4 @@
+defaults:
+  - h1hand_maze
+  - _self_
+name: h1-maze-v0

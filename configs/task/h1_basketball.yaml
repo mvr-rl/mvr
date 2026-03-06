@@ -1,0 +1,5 @@
+defaults:
+  - h1hand_basketball
+  - _self_
+name: h1-basketball-v0
+target_prompts: ["a humanoid robot throwing a ball into the basket"]

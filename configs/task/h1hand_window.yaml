@@ -1,0 +1,2 @@
+name: h1hand-window-v0
+info_keys_to_print: ["stand_reward", "small_control", "moving_wipe_reward", "hand_tool_proximity_reward", "window_contact_reward","window_contact_filter","window_contact_total_reward"]

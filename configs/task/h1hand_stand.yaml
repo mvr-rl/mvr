@@ -1,0 +1,4 @@
+name: h1hand-stand-v0
+info_keys_to_print: ["stand_reward", "small_control", "move", "standing", "upright"]
+target_prompts:
+  - a humanoid robot standing

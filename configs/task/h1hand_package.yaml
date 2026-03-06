@@ -1,0 +1,2 @@
+name: h1hand-package-v0
+info_keys_to_print: ["stand_reward", "small_control", "dist_package_destination", "dist_hand_package_right", "dist_hand_package_left", "package_height", "success"]

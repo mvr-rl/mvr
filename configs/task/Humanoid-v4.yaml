@@ -1,0 +1,2 @@
+name: Humanoid-v4
+info_keys_to_print: ["reward_linvel", "reward_quadctrl", "reward_alive"]

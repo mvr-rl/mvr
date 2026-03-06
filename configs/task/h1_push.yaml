@@ -1,0 +1,5 @@
+defaults:
+  - h1hand_push
+  - _self_
+name: h1-push-v0
+target_prompts: ["a humanoid robot pushing a box to the target"]

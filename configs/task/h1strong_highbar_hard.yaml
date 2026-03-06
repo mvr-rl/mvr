@@ -1,0 +1,3 @@
+name: h1strong-highbar_hard-v0
+info_keys_to_print: ["upright_reward", "feet_reward", "small_control"]
+target_prompts: ["a humanoid robot swinging around a horizontal bar"]

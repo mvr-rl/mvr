@@ -1,0 +1,3 @@
+name: h1hand-crawl-v0
+info_keys_to_print: ["crawling", "crawling_head", "small_control", "move", "in_tunnel"]
+target_prompts: ["a humanoid robot crawling"]

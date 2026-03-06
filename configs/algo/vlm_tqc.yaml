@@ -1,0 +1,47 @@
+# @package _global_
+defaults:
+ - /algo/tqc
+ - _self_
+
+# VLM flags
+use_vlm: true
+use_moe: false
+
+# VLM-specific video sampling (override TQC defaults)
+video_sampling_config:
+  video_length: 128
+  sep: 16
+  sampling_freq: 3
+  rendering_freq: 16
+
+# VLM callback configurations
+collect_clip_callback:
+  _target_: src.training.callbacks.CollectClipsCallback
+  _partial_: true
+  vlm:
+    _target_: vlms.ViCLIP
+    pretrained: ${vlm_models.viclip_large}
+    image_width: ${image_width}
+    target_prompts: ${task.target_prompts}
+  n_episodes_per_call: 10
+  encoding_batch_size: 32
+
+video_collect_freq: 10_000
+relabel_freq: 50_000
+vlm_related_stats: ["pred_vlm_reward", "vlm_reward",
+            "n_video_clips_added", "n_video_clips"]
+
+relabel_buffer_callback:
+  _target_: src.training.callbacks.RelabelBufferCallback
+  verbose: 2
+
+# VLM-specific agent configuration
+agent:
+  _target_: src.algorithms.vlm.vlm_tqc.VLMTQC
+  reward_learning_buffer_size: 20_000
+  video_length: ${video_sampling_config.video_length}
+  vlm_reward_scale: 0.1
+  reward_model_class: reward_models.per_step_ranking_base_model2.PerStepRankingBased2
+
+# Override algorithm identifier
+algo: "vlm-tqc"

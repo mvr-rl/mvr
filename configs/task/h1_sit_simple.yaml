@@ -1,0 +1,4 @@
+defaults:
+  - h1hand_sit_simple
+  - _self_
+name: h1-sit_simple-v0

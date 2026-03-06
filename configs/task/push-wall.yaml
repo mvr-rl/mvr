@@ -1,0 +1,4 @@
+name: push-wall-v3-goal-observable
+info_keys_to_print: ["success", "near_object", "grasp_success", "grasp_reward", "in_place_reward","obj_to_target", "unscaled_reward"]
+target_prompts: ["a robot gripper bypassing a wall and pushing a cylinder"]
+target_prompts_components: ["a robot gripper approaching a cylinder blocked by a wall", "a robot gripper moving around the wall obstacle", "a robot gripper reaching the cylinder after bypassing the wall", "a robot gripper pushing the cylinder past the wall", "a robot gripper placing the cylinder at the goal beyond the wall"]

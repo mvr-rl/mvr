@@ -1,0 +1,3 @@
+name: h1hand-cabinet-v0
+info_keys_to_print: ["stand_reward", "small_control", "success_subtasks", "success"]
+target_prompts: ["a humanoid robot opening a cabinet door and putting a cube inside"]

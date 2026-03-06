@@ -1,0 +1,2 @@
+name: h1hand-door-v0
+info_keys_to_print: ["stand_reward", "small_control", "door_openness_reward", "door_hatch_openness_reward", "hand_hatch_proximity_reward", "passage_reward"]

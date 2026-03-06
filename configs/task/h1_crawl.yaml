@@ -1,0 +1,5 @@
+defaults:
+  - h1hand_crawl
+  - _self_
+name: h1-crawl-v0
+target_prompts: ["a humanoid robot crawling and passing inside a tunnel"]

@@ -1,0 +1,4 @@
+name: peg-unplug-side-v3-goal-observable
+info_keys_to_print: ["success", "near_object", "grasp_success", "grasp_reward", "in_place_reward","obj_to_target", "unscaled_reward"]
+target_prompts: ["a robot gripper unpluging a peg sideways"]
+target_prompts_components: ["a robot gripper approaching a peg inserted sideways", "a robot gripper grasping the side of the peg", "a robot gripper pulling the peg outward", "a robot gripper moving the peg away from the hole", "a robot gripper completely extracting the peg from the side"]

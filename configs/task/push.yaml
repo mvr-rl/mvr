@@ -1,0 +1,4 @@
+name: push-v3-goal-observable
+info_keys_to_print: ["success", "near_object", "grasp_success", "grasp_reward", "in_place_reward","obj_to_target", "unscaled_reward"]
+target_prompts: ["a robot gripper pushing a cylinder"]
+target_prompts_components: ["a robot gripper approaching a cylinder from behind", "a robot gripper making contact with the cylinder", "a robot gripper pushing the cylinder forward", "a robot gripper moving the cylinder along a straight path", "a robot gripper placing the cylinder at the target position"]

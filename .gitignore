@@ -1,0 +1,134 @@
+# Outputs and results
+outputs
+multirun
+ckpts
+concept_generation_output
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+!examples/*.ipynb
+
+# MLflow
+mlruns/
+
+# Weights & Biases
+wandb/
+
+# TensorBoard
+runs/
+logs/
+
+# Model files
+*.pth
+*.pt
+*.pkl
+*.h5
+*.hdf5
+*.ckpt
+*.pb
+
+# Log files
+*.log
+*.out
+nohup.out
+*.txt
+
+# HTML reports
+*.html
+
+# Hydra
+.hydra/
+
+# SLURM
+slurm/
+
+# Test directories  
+test/
+tests/
+
+# Project specific
+humanoid-bench/
+Metaworld/
+vlms/__pycache__/
+demo.ipynb
+ViCLIP/
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Media files (large)
+*.gif
+*.mp4
+*.avi
+*.mov
+*.png
+*.jpg
+*.jpeg
+!**/assets/*.png
+!**/assets/*.jpg
+!**/assets/*.jpeg
+
+# Data files
+*.csv
+*.json
+!config*.json
+!**/configs/*.json
+*.parquet
+*.feather
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+cache
+# Keep required public assets and ViCLIP source
+!env/robot.png
+!env/sky.png
+!env/tiles.png
+!vlms/ViCLIP/
+!vlms/ViCLIP/**

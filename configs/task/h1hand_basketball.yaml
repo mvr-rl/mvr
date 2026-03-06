@@ -1,0 +1,3 @@
+name: h1hand-basketball-v0
+info_keys_to_print: ["reward_hand_proximity", "reward_ball_success", "stand_reward", "small_control", "success_subtasks","success"]
+target_prompts: ["a humanoid robot throwing a ball into the basket"]

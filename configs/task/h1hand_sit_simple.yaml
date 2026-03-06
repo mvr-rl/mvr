@@ -1,0 +1,3 @@
+name: h1hand-sit_simple-v0
+info_keys_to_print: ["small_control", "sit_reward", "dont_move", "sitting", "upright","sitting_posture"]
+target_prompts: ["a humanoid robot sitting on a chair"]

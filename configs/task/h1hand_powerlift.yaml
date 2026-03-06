@@ -1,0 +1,3 @@
+name: h1hand-powerlift-v0
+info_keys_to_print: ["stand_reward", "small_control", "reward_dumbbell_lifted", "standing", "upright"]
+target_prompts: ["a humanoid robot performs clean and jerk."]

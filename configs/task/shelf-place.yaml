@@ -1,0 +1,4 @@
+name: shelf-place-v3-goal-observable
+info_keys_to_print: ["success", "near_object", "grasp_success", "grasp_reward", "in_place_reward","obj_to_target", "unscaled_reward"]
+target_prompts: ["a robot gripper picking and placing a cube onto a shelf"]
+target_prompts_components: ["a robot gripper approaching a cube on the table", "a robot gripper grasping the cube securely", "a robot gripper lifting the cube above the table", "a robot gripper moving the cube towards a shelf", "a robot gripper placing the cube onto the shelf"]

@@ -1,0 +1,3 @@
+name: h1hand-reach-v0
+info_keys_to_print: ["hand_dist", "healthy_reward", "reward_close", "reward_success"]
+target_prompts: ["a humanoid robot reaching the 3D point with the left hand"]

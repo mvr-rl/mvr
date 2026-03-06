@@ -1,0 +1,4 @@
+name: window-close-v3-goal-observable
+info_keys_to_print: ["success", "near_object", "grasp_success", "grasp_reward", "in_place_reward","obj_to_target", "unscaled_reward"]
+target_prompts: ["a robot gripper pushing and closing a window"]
+target_prompts_components: ["a robot gripper approaching an open window", "a robot gripper making contact with the window frame", "a robot gripper pushing the window to close it", "a robot gripper moving the window towards the closed position", "a robot gripper fully closing the window"]

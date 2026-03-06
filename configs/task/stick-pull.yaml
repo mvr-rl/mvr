@@ -1,0 +1,4 @@
+name: stick-pull-v3-goal-observable
+info_keys_to_print: ["success", "near_object", "grasp_success", "grasp_reward", "in_place_reward","obj_to_target", "unscaled_reward"]
+target_prompts: ["a robot gripper grasping a cuboid and pulling a kettle with the cuboid"]
+target_prompts_components: ["a robot gripper approaching a cuboid stick", "a robot gripper grasping the cuboid stick", "a robot gripper positioning the stick near a kettle handle", "a robot gripper hooking the kettle with the stick", "a robot gripper pulling the kettle using the cuboid stick"]

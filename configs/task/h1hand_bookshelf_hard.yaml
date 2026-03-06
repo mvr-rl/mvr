@@ -1,0 +1,2 @@
+name: h1hand-bookshelf_hard-v0
+info_keys_to_print: ["stand_reward", "small_control", "reward_proximity", "reward_hand_proximity", "obj_goal_dist","success_subtasks", "success"]

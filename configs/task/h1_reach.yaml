@@ -1,0 +1,5 @@
+defaults:
+  - h1hand_reach
+  - _self_
+name: h1-reach-v0
+target_prompts: ["a humanoid robot reaching the 3D point with the left hand"]

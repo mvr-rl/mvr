@@ -1,0 +1,2 @@
+name: h1hand-truck-v0
+info_keys_to_print: ["upright", "reward_robot_package_truck", "reward_robot_package_picked_up", "reward_package_table", "packages_on_truck", "packages_picked_up", "packages_on_table", "success"]

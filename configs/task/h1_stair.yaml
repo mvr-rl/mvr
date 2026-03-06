@@ -1,0 +1,4 @@
+defaults:
+  - h1hand_stair
+  - _self_
+name: h1-stair-v0

@@ -1,0 +1,92 @@
+# @package _global_
+
+# Mapping of task identifiers to environment names
+task_names:
+  hammer: "hammer-v3-goal-observable"
+  push-wall: "push-wall-v3-goal-observable"
+  faucet-close: "faucet-close-v3-goal-observable"
+  push-back: "push-back-v3-goal-observable"
+  stick-pull: "stick-pull-v3-goal-observable"
+  handle-press-side: "handle-press-side-v3-goal-observable"
+  push: "push-v3-goal-observable"
+  shelf-place: "shelf-place-v3-goal-observable"
+  window-close: "window-close-v3-goal-observable"
+  peg-unplug-side: "peg-unplug-side-v3-goal-observable"
+  h1hand_run: "h1hand-run-customized-v0"
+  h1hand_sit_hard: "h1hand-sit_hard-customized-v0"
+  h1hand_sit_simple: "h1hand-sit_simple-customized-v0"
+  h1hand_stair: "h1hand-stair-customized-v0"
+  h1hand_balance_hard: "h1hand-balance_hard-customized-v0"
+  h1hand_balance_simple: "h1hand-balance_simple-customized-v0"
+  h1hand_slide: "h1hand-slide-customized-v0"
+  h1hand_walk: "h1hand-walk-customized-v0"
+  h1hand_stand: "h1hand-stand-customized-v0"
+  h1_run: "h1-run-customized-v0"
+  h1_sit_hard: "h1-sit_hard-customized-v0"
+  h1_sit_simple: "h1-sit_simple-customized-v0"
+  h1_stair: "h1-stair-customized-v0"
+  h1_balance_hard: "h1-balance_hard-customized-v0"
+  h1_balance_simple: "h1-balance_simple-customized-v0"
+  h1_slide: "h1-slide-customized-v0"
+  h1_walk: "h1-walk-customized-v0"
+  h1_stand: "h1-stand-customized-v0"
+
+# List of tasks to run sequentially for each seed
+tasks:
+  - hammer
+  - push-wall
+  - faucet-close
+  - push-back
+  - stick-pull
+  - handle-press-side
+  - push
+  - shelf-place
+  - window-close
+  - peg-unplug-side
+
+mode: "train"                    # Mode of operation (train, eval)
+date_time: null                  # Timestamp for this run
+
+# Resume training parameters
+resume: false                    # Whether to resume from previous training
+resume_from_task: null          # Specific task ID to resume from (0-based index), null for auto-detection
+resume_run_dir: null            # Specific run directory to resume from, null for auto-detection
+
+# Training parameters
+total_timesteps: 1000000        # Total timesteps for training per task
+eval_render: false              # Whether to render during evaluation
+image_width: 224               # Width of the image for rendering
+
+# Logging and experiment tracking
+wandb_mode: "offline"          # Default to offline logging for public release
+wandb_project_name: "mvr-rl"
+
+# Unified run name format
+run_name: "${algo}-${task.name}-seed${seed}"
+run_name_prefix: ""
+run_name_suffix: ""
+
+# Hydra configuration
+hydra:
+  output_subdir: null
+  job:
+    chdir: false  # Don't change working directory
+  run:
+    dir: ${outputs_dir}/${algo}/${run_name}/${now:%Y-%m-%d_%H-%M-%S}
+
+# Model checkpoints and pretrained models
+ckpts_dir: ckpts
+
+# VLM model paths
+vlm_models:
+  viclip_large: ${ckpts_dir}/ViCLIP/ViCLIP-L_InternVid-FLT-10M.pth
+  xclip_large: ${ckpts_dir}/xclip-large-patch14
+
+# Output directories
+outputs_dir: outputs
+
+# Add missing fields that should be in global scope
+num_envs: 8
+device: "auto"
+rendering_backend: egl
+eval_freq: 100_000 

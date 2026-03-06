@@ -1,0 +1,2 @@
+name: h1hand-spoon-v0
+info_keys_to_print: ["stand_reward", "small_control", "hand_tool_proximity_reward", "reward_spoon_in_cup", "spoon_spinning_reward"]

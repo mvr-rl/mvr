@@ -1,0 +1,3 @@
+name: h1hand-hurdle-v0
+info_keys_to_print: ["stand_reward", "small_control", "move", "standing", "upright", "wall_collision_discount"]
+target_prompts: ["a humanoid robot hurdling"]

@@ -1,0 +1,4 @@
+name: handle-press-side-v3-goal-observable
+info_keys_to_print: ["success", "near_object", "grasp_success", "grasp_reward", "in_place_reward","obj_to_target", "unscaled_reward"]
+target_prompts: ["a robot gripper pressing a handle down sideways"]
+target_prompts_components: ["a robot gripper approaching a side handle", "a robot gripper making contact with the side handle", "a robot gripper pressing the handle sideways", "a robot gripper moving the handle downward from the side", "a robot gripper fully pressing the handle to the bottom"]

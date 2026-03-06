@@ -1,0 +1,4 @@
+name: hammer-v3-goal-observable
+info_keys_to_print: ["success", "near_object", "grasp_success", "grasp_reward", "in_place_reward","obj_to_target", "unscaled_reward"]
+target_prompts: ["a robot gripper hammering a screw on the wall"]
+target_prompts_components: ["a robot gripper approaching a hammer on the table", "a robot gripper grasping the hammer handle", "a robot gripper lifting the hammer above a nail", "a robot gripper aligning the hammer with a nail on the wall", "a robot gripper striking the nail with the hammer"]
